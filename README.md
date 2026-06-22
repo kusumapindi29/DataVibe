@@ -80,7 +80,6 @@ This is the heart of the project — the deliberate safeguards:
 | **Auto-create destination DB** | "database does not exist" failures | Each connector can `ensure_database()`; a missing Postgres db is created instead of failing |
 | **Reconciliation + auto-rollback** | Declaring success on a bad load | Row counts, checksums, referential integrity → confidence score; low confidence rolls back |
 | **Full traceability** | "Why did it do that?" | Every LLM call logs its **prompt, token usage, and JSON output**; every agent logs start/finish + key results (readable console + JSONL audit) |
-| **Secrets never committed** | Leaking keys | `.env` is git-ignored; only a `.env.example` template ships |
 
 ---
 
